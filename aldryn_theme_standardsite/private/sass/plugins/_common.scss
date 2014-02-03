@@ -14,7 +14,7 @@
 	// meta informations
 	[class$="-meta"] { padding:0; }
 	[class$="-date"] { @extend .icon; @extend .icon-arrow-right; }
-	[class$="-author"]:before { content:" – "; }
+	[class$="-author"]:before { content:" - "; }
 	[class$="-date"]:before { padding-right:$icon-space; }
 
 	// back button
@@ -30,7 +30,7 @@
 
 	// more button
 	[class$="-more"] { text-transform:uppercase; padding:0 0 $line-space / 2; }
-	[class$="-more"]:before { content:"– "; }
+	[class$="-more"]:before { content:"- "; }
 
 	// empty view
 	[class$="-empty"] {

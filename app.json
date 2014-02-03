@@ -2,7 +2,7 @@
 	"theme": "divio-boilerplate",
 	"name": "Theme Standardsite",
 	"description": "Custom theme",
-	"version": "0.0.1",
+	"version": "0.0.1.a",
 	"url": "https://github.com/aldryn/aldryn-theme-standardsite",
 	"package-name": "aldryn-theme-standardsite",
 	"installed-apps": [
