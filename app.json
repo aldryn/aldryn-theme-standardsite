@@ -1,5 +1,5 @@
 {
-	"theme": "divio-boilerplate",
+	"theme": "aldryn-boilerplate",
 	"name": "Theme Standardsite",
 	"description": "Custom theme",
 	"version": "0.0.1.a",
@@ -11,9 +11,5 @@
 	"author": {
 		"name": "Divio AG",
 		"url": "https://www.divio.ch"
-	},
-	"license": {
-		"name": "BSD",
-		"text": "!literal-include LICENSE.txt"
 	}
 }
