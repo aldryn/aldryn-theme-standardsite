@@ -1,0 +1,23 @@
+// @media all {
+//######################################################################################################################
+// #MOBILE#
+
+.form-contact legend { @extend h2; }
+input:hover, select:hover, textarea:hover { @include box-shadow(0 0 3px #e5e5e5); @include transition(border, 200ms); }
+
+// end of mobile
+// }
+
+@media (min-width: $responsive-tablet) {
+//######################################################################################################################
+// #TABLET#
+
+// end of tablet
+}
+
+@media (min-width: $responsive-desktop) {
+//######################################################################################################################
+// #DESKTOP#
+
+// end of desktop
+}
