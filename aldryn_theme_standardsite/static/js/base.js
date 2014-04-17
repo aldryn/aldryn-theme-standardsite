@@ -17,7 +17,7 @@ jQuery(document).ready(function () {
 	requirejs.config({ 'baseUrl': Cl.static + 'js/' });
 
 	// load modules using require
-	require(['modules/cl.utils.min.js'], function() {
+	require(['modules/cl.utils'], function() {
 		// removes noscript form body and adds print-js
 		Cl.Utils.document();
 		// handles input placeholder="" attributes
@@ -30,7 +30,7 @@ jQuery(document).ready(function () {
 	});
 
 	// load mobilemenu
-	require(['addons/cl.mobilemenu.min.js'], function () {
+	require(['addons/cl.mobilemenu.min'], function () {
 		new Cl.Mobilemenu({
 			'bound': 739,
 			'offset': {
@@ -40,7 +40,7 @@ jQuery(document).ready(function () {
 	});
 
 	// adds standardsite specific features
-	require(['modules/cl.standardsite.min.js'], function () {
+	require(['modules/cl.standardsite'], function () {
 	    // handles fixed navigation and "top" link
 	    Cl.Standardsite.navigation();
 	});

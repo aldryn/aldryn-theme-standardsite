@@ -21,6 +21,7 @@
 
 {% block header %}
 <!-- start: header -->
+<div class="mainnav-knob"></div>
 <header class="header" role="banner">
 	<div class="row">
 		{% comment %}logo should be placed absolute in this container to support seo positioning{% endcomment %}
@@ -43,7 +44,6 @@
 
 			{% block mainnav %}
 			<h2 class="visuallyhidden" id="navigation">{% trans "Navigation:" %}</h2>
-			<div class="mainnav-knob"></div>
 			{% render_model_block request.current_page "changelist" %}
 				{% with class="mainnav" title=_("Navigation") %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endwith %}
 			{% endrender_model_block %}
@@ -93,9 +93,7 @@
 			</ul>
 		</nav>
 		<p class="copyright">
-			{% trans "Copyright" %} &copy; {% now "Y" %}
-			<a href="http://www.divio.ch/" target="_blank">{% trans "Divio AG" %}</a>.
-			{% trans "All rights reserved" %}.
+			{% static_placeholder "footer" %}
 		</p>
 	</div>
 </footer>
