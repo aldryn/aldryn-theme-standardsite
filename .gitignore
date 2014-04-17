@@ -4,3 +4,5 @@
 /env/
 /*.egg-info/
 *.css
+
+aldryn_theme_standardsite/templates/aldryn_theme_standardsite/base.html
