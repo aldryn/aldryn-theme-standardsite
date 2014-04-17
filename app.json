@@ -11,5 +11,8 @@
 	"author": {
 		"name": "Divio AG",
 		"url": "https://www.divio.ch"
-	}
+	},
+    "license": {
+        "name": "BSD"
+    }
 }
