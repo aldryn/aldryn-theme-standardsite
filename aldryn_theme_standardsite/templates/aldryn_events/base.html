@@ -3,13 +3,13 @@
 
 {% block content %}
 <div class="row">
-	<div class="large-17 column">
-		<div class="app app-events">
-			{% block content_events %}{% endblock %}
-		</div>
-	</div>
-	<div class="large-7 column">
-		{% with 260 as width %}{% static_placeholder "sidebar_events" %}{% endwith %}
-	</div>
+    <div class="large-17 column">
+        <div class="app app-events">
+            {% block content_events %}{% endblock %}
+        </div>
+    </div>
+    <div class="large-7 column">
+        {% with 260 as width %}{% static_placeholder "sidebar_events" %}{% endwith %}
+    </div>
 </div>
 {% endblock content %}

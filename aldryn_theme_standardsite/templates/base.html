@@ -71,8 +71,6 @@
                 </fieldset>
             </form>
             {% endblock %}
-
-            {% include "shop_plugnplay/plugins/basket.html" %}
         </div>
     </div>
 </div>
@@ -100,6 +98,7 @@
 <h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
 <div class="content">
 {% block messages %}{% include "includes/messages.html" %}{% endblock messages %}
+{% block feature %}{% placeholder "feature" %}{% endblock feature %}
 {% block extend_base %}
     {% block content %}{% endblock %}
 {% endblock extend_base %}
