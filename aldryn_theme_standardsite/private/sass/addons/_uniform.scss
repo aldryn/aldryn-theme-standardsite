@@ -13,7 +13,7 @@
 //###########################################################
 // common styles
 .uniform-radio, .uniform-checkbox { line-height:0; width:14px; height:14px;
-	@include border-radius($input-radius); border:1px solid $input-border; background:$input-background; }
+    @include border-radius($input-radius); border:1px solid $input-border; background:$input-background; }
 .uniform-select, .uniform-file { border:1px solid $input-border; background:$input-background; @include border-radius($input-radius); }
 
 // theme for checkbox
@@ -29,9 +29,9 @@
 // theme for file
 .uniform-file { clear:both; overflow:hidden; }
 .uniform-file-status { float:left; color:$input-font-color; font-size:12px; line-height:12px; padding:3px 0 0 0;
-	max-width:70%; white-space:nowrap; overflow:hidden; }
+    max-width:70%; white-space:nowrap; overflow:hidden; }
 .uniform-file-btn { float:right; color:$input-font-color; font-size:12px; line-height:12px; cursor:pointer;
-	padding:3px 5px 4px; margin:0 -4px 0 0; background:$input-border; @include border-radius($input-radius);
+    padding:3px 5px 4px; margin:0 -4px 0 0; background:$input-border; @include border-radius($input-radius);
 }
 .uniform-file:hover .uniform-file-btn { color:white; background:#666; }
 
