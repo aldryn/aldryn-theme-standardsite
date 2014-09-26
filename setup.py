@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from setuptools import setup
-from aldryn_theme_autofaszination_sidenav import __version__
+from aldryn_theme_standardsite import __version__
 
 
 CLASSIFIERS = [
@@ -18,13 +18,13 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name='aldryn-theme-autofaszination-sidenav',
+    name='aldryn-theme-standardsite',
     version=__version__,
     description='Custom theme support for django CMS cloud',
     author='Divio AG',
     author_email='info@divio.ch',
-    url='https://github.com/aldryn/aldryn-theme-autofaszination-sidenav',
-    packages=['aldryn_theme_autofaszination_sidenav'],
+    url='https://github.com/aldryn/aldryn-theme-standardsite',
+    packages=['aldryn_theme_standardsite'],
     license='LICENSE.txt',
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,

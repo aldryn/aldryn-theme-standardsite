@@ -1,10 +1,10 @@
 # COMPASS SETTINGS
 
 http_path = "" # use if other than /
-sass_dir = "aldryn_theme_autofaszination_sidenav/private/sass"
-css_dir = "aldryn_theme_autofaszination_sidenav/static/css"
-images_dir = "aldryn_theme_autofaszination_sidenav/static/img"
-javascripts_dir = "aldryn_theme_autofaszination_sidenav/static/js"
+sass_dir = "aldryn_theme_standardsite/private/sass"
+css_dir = "aldryn_theme_standardsite/static/css"
+images_dir = "aldryn_theme_standardsite/static/img"
+javascripts_dir = "aldryn_theme_standardsite/static/js"
 
 # output_style = :expanded or :nested or :compact or :compressed
 output_style = :compressed
