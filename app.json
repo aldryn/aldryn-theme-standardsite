@@ -1,18 +1,18 @@
 {
 	"theme": "aldryn-boilerplate",
-	"name": "Theme Standardsite",
+	"name": "Theme Autofaszination Sidenav",
 	"description": "Custom theme",
-	"version": "0.2.1",
-	"url": "https://github.com/aldryn/aldryn-theme-standardsite",
-	"package-name": "aldryn-theme-standardsite",
+	"url": "https://github.com/aldryn/aldryn-theme-autofaszination-sidenav",
+	"package-name": "aldryn-theme-autofaszination-sidenav",
 	"installed-apps": [
-		"aldryn_theme_standardsite"
+		"aldryn_theme_autofaszination_sidenav"
 	],
 	"author": {
 		"name": "Divio AG",
 		"url": "https://www.divio.ch"
 	},
     "license": {
-        "name": "BSD"
+        "name": "BSD",
+        "text": "!literal-include LICENSE.txt"
     }
 }

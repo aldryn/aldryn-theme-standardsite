@@ -1,0 +1,47 @@
+{% load static sekizai_tags standard_form %}
+<div id="appointment-frm">
+    <h2>TERMIN AM</h2>
+    <form action="{% url 'admin:aldryn-car4you-create-appointment' %}" method="post" class="frm">
+        {% csrf_token %}
+        <fieldset class="frm-horizontal">
+            <ol>
+                <li>
+                    <label for="form.appointment_datetime">{{ form.appointment_datetime.label }}<abbr title="required">*</abbr></label>
+                    <div class="field ">
+                        <input id="id_appointment_datetime_0" name="appointment_datetime_0" type="date" tabindex="-1">
+                        <input id="id_appointment_datetime_1" name="appointment_datetime_1" type="time" tabindex="-1">
+                    </div>
+                </li>
+                <li>{% standard_field form.task %}</li>
+                <li>{% standard_field form.phone %}</li>
+                <li>{% standard_field form.email %}</li>
+                <li>{% standard_field form.message %}</li>
+                <li>{% standard_submit %}</li>
+            </ol>
+        </fieldset>
+    </form>
+</div>
+
+{% addtoblock 'js' %}
+<script type="text/javascript">
+    var frm = $('.frm');
+    frm.submit(function (ev) {
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+            success: function (data) {
+                alert('thank you for your appointment \nyou may close this window.');
+            }
+        });
+        ev.preventDefault();
+    });
+</script>
+{% endaddtoblock %}
+
+{% comment %}
+TODO:
+  * Show date selector for form.datetime
+  * Display fieldset 'popup' in a popup after a date has been selected
+  * Validate & Submit the form through ajax, show validation errors directly in the popup
+{% endcomment %}

@@ -1,0 +1,67 @@
+{% load i18n sekizai_tags static %}
+{% load url from future %}
+
+<div class="plugin plugin-events">
+    <div class="events-calendar">
+        <h2>Termin vereinbaren</h2>
+        <h3>{{ calendar_label }}</h3>
+        <p class="controls">
+            <a href="" class="back">{% trans "Previous month" %}</a>
+            <a href="" class="next">{% trans "Next month" %}</a>
+        </p>
+        {% include "aldryn_events/includes/calendar_table.html" %}
+    </div>
+</div>
+
+
+{% addtoblock "js" %}<script src="{% static 'js/addons/cl.lightbox.min.js' %}"></script>{% endaddtoblock %}
+{% addtoblock "js" %}
+<script>
+    $( document ).ready(function() {
+        // Set lightbox
+        var bindLightbox = function (){
+            var lightbox = new Cl.Lightbox('.cl-lightbox',{
+                'dimensions': {
+                    'width': 420,
+                    'height': 620,
+                    'group': true,
+                    'responsive': true
+                }
+            });
+            $('.cl-lightbox').on('click', function(event){
+                event.preventDefault();
+                var date = $(this).find("span").data('date');
+                $('.field').first().find('#id_appointment_datetime_0').val(date);
+            });
+        }
+        bindLightbox();
+        //calendar interaction
+
+        $( ".controls a" ).on("click", function(event) {
+            event.preventDefault();
+            var wrapper = $(this).closest("div.events-calendar");
+            var title = $(wrapper).find("h3");
+            var direction = $(this).attr("class");
+            var table = $(wrapper).find("table.table-calendar");
+            var month = $(table).data('month-numeric');
+            var year = $(table).data('year');
+
+
+            if (direction == 'next' || direction == 'back') {
+                if (direction == 'next') {
+                    if (month == 12) { month = 1; year += 1; } else { month += 1; }
+
+                } else if (direction == 'back') {
+                    if (month == 1) { month = 12; year -= 1; } else { month -= 1; }
+                }
+
+                $.get("{% url 'admin:get-calendar-dates' %}" + year + "/" + month + "/", function(data) {
+                    $(table).replaceWith(data);
+                    $(title).html($(data).data('month') + ' ' + $(data).data('year'));
+                    bindLightbox();
+                });
+            }
+        });
+    });
+</script>
+{% endaddtoblock %}

@@ -1,3 +1,3 @@
-recursive-include aldryn_theme_standardsite/static *
-recursive-include aldryn_theme_standardsite/private *
-recursive-include aldryn_theme_standardsite/templates *.html
+recursive-include aldryn_theme_autofaszination_sidenav/static *
+recursive-include aldryn_theme_autofaszination_sidenav/private *
+recursive-include aldryn_theme_autofaszination_sidenav/templates *.html

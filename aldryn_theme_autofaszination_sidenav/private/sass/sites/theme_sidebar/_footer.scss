@@ -1,0 +1,39 @@
+// @media all {
+//######################################################################################################################
+// #MOBILE#
+
+.footer { color:#8c8c8c; font-size:13px; line-height:18px; text-transform:uppercase;
+	padding:25px 0; margin-top:20px;
+	@include clearfix();
+
+	a { color:#666; text-decoration:none; }
+	a:hover { color:#999; text-decoration:underline; }
+	.copyright { width: 100%; text-align:left;
+		p { margin:0 0 5px; }
+	}
+	.footnav { list-style-type:none; padding:0; margin:0; text-align:center;
+		li { @include inline-block(); padding:0; }
+	}
+}
+
+// end of mobile
+// }
+
+@media (min-width: $responsive-tablet) {
+//######################################################################################################################
+// #TABLET#
+
+.footer { margin-top:50px;
+	.copyright { float:left; }
+	.footnav { float:right; }
+}
+
+// end of tablet
+}
+
+@media (min-width: $responsive-desktop) {
+//######################################################################################################################
+// #DESKTOP#
+
+// end of desktop
+}

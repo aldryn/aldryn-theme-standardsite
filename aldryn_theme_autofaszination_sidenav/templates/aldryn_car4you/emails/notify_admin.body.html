@@ -1,0 +1,7 @@
+{% extends "aldryn_car4you/emails/notify_base.html" %}
+{% load i18n %}
+
+{% block subject %}{{ subject_admin }}{% endblock subject %}
+{% block message %}
+    <p>{% trans "Hello. There has been a new appointment submission. Please see the details below." %}</p>
+{% endblock message %}

@@ -1,0 +1,65 @@
+// @media all {
+//######################################################################################################################
+// #MOBILE#
+.frm,
+.aldryn-forms-form {
+    @include appearance(none);
+    li {list-style-type: none; @include border-radius(4px, 4px); margin-bottom: 10px; }
+    input { width: 250px; display: block; @include border-radius(4px, 4px); margin-bottom: 10px;  border: 1px solid black }
+    input[type="checkbox"],
+    input[type="radio"] {
+        float: left;
+        width: 20px!important;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    select { display: block; }
+    textarea {
+        display: block;
+        max-width: 300px;
+        width: 250px;
+        min-height: 100px;
+        @include border-radius(4px, 4px);
+        margin-bottom: 10px;
+    }
+    .frm, .aldryn-forms-button input{ width: 70px; margin-bottom: 20px; @include border-radius(4px, 4px);}
+}
+.google-map-routeplaner {
+    input[type="text"] {
+        background-color: #ededed;
+        border: 1px solid grey;
+        @include border-radius(3px);
+        min-width: 250px;
+        max-width: 300px;
+        height: 30px;
+        float: left;
+    }
+    .btn { border: 0px; height: 25px; padding: 0;  &:hover { background-color: transparent; } }
+    p label { display: none; }
+    input[type="submit"]{
+        width: 140px;
+        height: 34px;
+        @include background-image(linear-gradient(#edc600, #e7b400));
+        margin-left: 20px;
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        border: 1px solid grey;
+    }
+}
+// end of mobile
+// }
+
+@media (min-width: $responsive-tablet) {
+//######################################################################################################################
+// #TABLET#
+.aldryn-forms-form textarea { max-width: 500px; }
+// end of tablet
+}
+
+@media (min-width: $responsive-desktop) {
+//######################################################################################################################
+// #DESKTOP#
+.aldryn-forms-form textarea { max-width: 700px; width: 400px;  }
+// end of desktop
+}
